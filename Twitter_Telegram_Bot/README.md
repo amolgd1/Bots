@@ -2,7 +2,7 @@
 
 # Twitter Telegram Bot
 
-This Telegram bot tracks interactions on Twitter and assigns points based on specific criteria.
+This Python script is a Telegram bot designed to track and award points to Twitter users based on their interactions. The bot monitors tweets mentioning a specific Twitter username and a designated keyword. It awards points for new tweets and additional points for likes and retweets on those tweets. Additionally, the bot awards points to users who post comments containing the specified keyword. The points are tracked in a leaderboard, which can be accessed through Telegram commands such as /leaderboard, /daily_leaderboard, /weekly_leaderboard, and /monthly_leaderboard. Users can also check their individual points with the /mypoints command. The bot utilizes the Twitter API to fetch tweets and user data, and it saves and loads user points data from a JSON file. The overall goal is to create a gamified experience for users based on their Twitter interactions.
 
 ## Prerequisites
 
