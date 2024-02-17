@@ -4,15 +4,21 @@ from telegram.ext import Application, CommandHandler, CallbackContext
 import logging
 from datetime import datetime, timedelta
 import json
+import os
+from dotenv import load_dotenv
 
 # Logging setup
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Twitter API setup
-bearer_token = 'BEARER_TOKEN_FROM_TWITTER' #you can find on twitter developer tools
-  
+bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
+
 # Telegram bot setup
-telegram_token = 'YOUR_TELEGRAM_TOKEN' #telegram token
+telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
+
 bot = Bot(token=telegram_token)
 application = Application.builder().token(telegram_token).build()
 
